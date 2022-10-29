@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "https://light-slug-slacks.cyclic.app",
-  "homepage": "https://aleemilyas.github.io/taskapp",
+  "homepage": "https://aleemilyas.github.io/",
   "dependencies": {
     "@babel/core": "^7.16.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
