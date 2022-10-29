@@ -5,7 +5,7 @@ import * as actionCreators from './store/index.js'
 import { connect } from 'react-redux'
 import withRouter from './hoc/withRouter';
 import Spinner from './components/UI/Spinner/spinner';
-import { Routes , Route , Outlet } from 'react-router-dom';
+import { Routes , Route , Outlet , Navigate } from 'react-router-dom';
 const ADDTask  = React.lazy(()=> import( './containers/Tasks/createTask/createTask'));
 const Login = React.lazy(()=> import( './containers/Authecntication/Login/Login'))
 const SignUP = React.lazy(()=> import( './containers/Authecntication/SignUP/SingUP'));
@@ -49,6 +49,7 @@ function App(props) {
         <Route path="/login" element={ <Login  {...props.routers}/> } />
         <Route path="/SignUP" element={ <SignUP  {...props.routers}/> } />
         {routes}
+        <Route path="*" element={ <Navigate to='/' replace='true' /> } />
       </Routes>
       </Suspense>
     </Layout>
